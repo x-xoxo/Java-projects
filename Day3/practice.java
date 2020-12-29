@@ -161,16 +161,32 @@ public class practice
 		for(int i=0; i<10 ; i++)
 		{
 			String rdStr = (char)(rd.nextInt(26)+65) + "";
-			System.out.print(rdStr + " ");
 			str += rdStr;
 		}
-		System.out.println();
-		for(int j=0; j<3; j++)
-		{
-			int rndNum = rd.nextInt(10);
-			String pickedIndex = (char)(rndNum) + "";
-			System.out.print(rndNum);
-			System.out.println(pickedIndex);
-		}
+		System.out.println(str);
+//		for(int j=0; j<3; j++)
+//		{
+//			int rndNum = rd.nextInt(10);
+//			String pickedIndex = str.charAt(rndNum) + "";
+//			System.out.print((rndNum + 1) + " ");
+//			System.out.println(pickedIndex);
+//		}
+//		int oneindex = rd.nextInt(10);
+//		int twoindex = rd.nextInt(10);
+//		int threeindex = rd.nextInt(10);
+//		
+//		while(oneindex == twoindex)
+//		{
+//			twoindex = rd.nextInt(10);
+//		}
+//		while(oneindex == twoindex || twoindex == threeindex)
+//		{
+//			threeindex = rd.nextInt(10);
+//		}
+//		System.out.print(oneindex + 1 + " ");
+//		System.out.print(twoindex + 1 + " ");
+//		System.out.println(threeindex + 1);
+//		System.out.println(str.charAt(oneindex)+"" +str.charAt(twoindex)+""+str.charAt(threeindex)+"");
+		
 	}
 }
