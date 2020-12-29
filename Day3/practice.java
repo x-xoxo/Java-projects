@@ -1,6 +1,6 @@
 package Day3;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 import java.util.Random;
 

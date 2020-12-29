@@ -23,7 +23,7 @@ public class Q7
 			}
 			else
 			{
-				System.out.print(num + "의 약수는");
+				System.out.print(num + "의 약수: ");
 				for(int x=1; x<=num; x++)
 				{
 					if (num%x == 0)
@@ -31,7 +31,7 @@ public class Q7
 						System.out.print(x+" ");
 					}
 				}
-				System.out.println();
+				System.out.println("입니다.");
 			}
 		}
 		sc.close();
