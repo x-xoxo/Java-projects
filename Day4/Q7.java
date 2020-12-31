@@ -11,19 +11,19 @@ public class Q7
 		int num = 1;
 		while (num != 0)
 		{
-			System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ì–‘ìˆ˜í˜• ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 			num = sc.nextInt();
-			if (!(num > 0))
+			if (num < 0)
 			{
-				System.out.println("Error: Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("Error: ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 			}
 			else if (num == 0)
 			{
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			}
 			else
 			{
-				System.out.print(num + "ÀÇ ¾à¼ö: ");
+				System.out.print(num + "ì˜ ì•½ìˆ˜ëŠ”: ");
 				for(int x=1; x<=num; x++)
 				{
 					if (num%x == 0)
@@ -31,7 +31,7 @@ public class Q7
 						System.out.print(x+" ");
 					}
 				}
-				System.out.println("ÀÔ´Ï´Ù.");
+				System.out.println("ì…ë‹ˆë‹¤.");
 			}
 		}
 		sc.close();
