@@ -26,7 +26,7 @@ public class Q12
 			{
 				int iComNum[] = new int[3];
 				int strike=0, ball=0;
-				for(int k=0; k<3; k++)
+				for(int k=0; k<iComNum.length; k++)
 				{
 					iComNum[k] = rand.nextInt(9)+1;
 					while(iComNum[0]==iComNum[1])
@@ -40,44 +40,54 @@ public class Q12
 				}
 				while(strike != 3)
 				{
+					for(int k : iComNum)
+					{
+						System.out.print(k+" ");
+					}
+					System.out.println();
 					strike = 0;
 					ball = 0;
 					int iUserNum[] = new int[3];
-					for(int i=0; i<3; i++)
+					for(int i=0; i<iUserNum.length; i++)
 					{
 						System.out.printf("%d번째 숫자를 입력하세요 : ",i+1);
 						iUserNum[i] = sc.nextInt();
 					}
-					for(int i=0; i<3; i++)
+					if(!(iUserNum[0]==iUserNum[1]||iUserNum[1]==iUserNum[2]||iUserNum[2]==iUserNum[0]))
 					{
-						if(iUserNum[i] == iComNum[i])
+						for(int i=0; i<iComNum.length; i++)
 						{
-							strike++;
+							for(int j=0; j<iUserNum.length; j++)
+							{
+								if(iUserNum[j] == iComNum[i])
+								{
+									if(i==j)
+									{
+										strike++;
+									}
+									else
+									{
+										ball++;
+									}
+								}
+							}
 						}
-					}
-					if(iUserNum[0] == iComNum[1] || iUserNum[0] == iComNum[2])
-					{
-						ball++;
-					}
-					if(iUserNum[1] == iComNum[0] || iUserNum[1] == iComNum[2])
-					{
-						ball++;
-					}
-					if(iUserNum[2] == iComNum[0] || iUserNum[2] == iComNum[1])
-					{
-						ball++;
-					}
-					if(strike == 3)
-					{
-						System.out.println("홈런입니다!");
-					}
-					else if(strike == 0 && ball == 0)
-					{
-						System.out.println("아웃입니다.");
+						if(strike == 3)
+						{
+							System.out.println("홈런입니다!");
+						}
+						else if(strike == 0 && ball == 0)
+						{
+							System.out.println("아웃입니다.");
+						}
+						else
+						{
+							System.out.println(strike+"스트라이크, "+ball+"볼 입니다.");
+						}
 					}
 					else
 					{
-						System.out.println(strike+"스트라이크, "+ball+"볼 입니다.");
+						System.out.println("Error: 잘못된 입력입니다.");
 					}
 				}
 			}
