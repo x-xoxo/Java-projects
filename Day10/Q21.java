@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Q21 
 {
-	
+
 	public static void err()
 	{
 		System.out.println("Error: 잘못 입력하였습니다.");
 	}
-	
+
 	public static void printMulTable(int num)
 	{
 		System.out.println("----------------------------------");
@@ -18,14 +18,14 @@ public class Q21
 			System.out.println(num + "X" + i + "=" + (num * i));
 		}
 	}
-	
+
 	public static int inputdan(Scanner sc)
 	{
 		System.out.print("출력하기 원하는 단을 입력하세요 : ");
 		int mulTableNum = sc.nextInt(); // 정수 입력 받아 mulTableNum 에 대입
 		return mulTableNum;
 	}
-	
+
 	public static void selectMul(int num)
 	{
 		if (num < 2 || num > 9) // 입력한 단이 2~9 가 아닐경우 에러 메시지
@@ -37,7 +37,7 @@ public class Q21
 			printMulTable(num);
 		}
 	}
-	
+
 	public static void allMul()
 	{
 		System.out.println("----------------------------------");
@@ -59,30 +59,30 @@ public class Q21
 			System.out.println();
 		}
 	}
-	
+
 	public static int inputSelect(Scanner sc)
 	{
 		System.out.println("1.원하는 구구단 출력");
 		System.out.println("2.전체 구구단 출력");
 		return sc.nextInt(); // 정수 입력받기
 	}
-	
+
 	public static void mulTable(Scanner sc)
 	{
 		switch (inputSelect(sc)) // 입력받은 정수에 대한 분기
 		{
-			case 1:
-				selectMul(inputdan(sc));
-				break;
-			case 2:
-				allMul();
-				break;
-			default:
-				err();
-				break;
+		case 1:
+			selectMul(inputdan(sc));
+			break;
+		case 2:
+			allMul();
+			break;
+		default:
+			err();
+			break;
 		}
 	}
-	
+
 	public static void nemo()
 	{
 		for (int i=0; i<5; i++)
@@ -94,7 +94,7 @@ public class Q21
 			System.out.println();
 		}
 	}
-	
+
 	public static void samgak()
 	{
 		for (int i=1; i<=5; i++)
@@ -106,7 +106,7 @@ public class Q21
 			System.out.println();
 		}
 	}
-	
+
 	public static void samgak2()
 	{
 		for (int i=0; i<5; i++)
@@ -125,7 +125,7 @@ public class Q21
 			System.out.println();
 		}
 	}
-	
+
 	public static void pyramid()
 	{
 		for (int i=0; i<5; i++)
@@ -141,7 +141,7 @@ public class Q21
 			System.out.println();
 		}
 	}
-	
+
 	public static void dia()
 	{
 		for (int i=0; i<5; i++)
@@ -172,13 +172,13 @@ public class Q21
 			}
 		}
 	}
-	
+
 	public static int inputSelect2(Scanner sc)
 	{
-		System.out.println("1.네모\n2.직삼각형 정방향\n3.직삼각형 역방향\n4.피라미드\n5.다이아몬드");
+		System.out.println("1.네모 2.직삼각형 정방향 3.직삼각형 역방향 4.피라미드 5.다이아몬드");
 		return sc.nextInt();
 	}
-	
+
 	public static void shape(Scanner sc)
 	{
 		switch (inputSelect2(sc)) 
@@ -203,18 +203,18 @@ public class Q21
 			break;
 		}
 	}
-	
+
 	public static void exMsg()
 	{
 		System.out.println("프로그램을 종료합니다.");
 	}
-	
+
 	public static int firstInput(Scanner sc)
 	{
 		System.out.println("1.구구단 출력\n2.별찍기 출력\n3.종료");
 		return sc.nextInt();
 	}
-	
+
 	public static void initSelect(int input, Scanner sc)
 	{
 		switch (input) 
@@ -233,7 +233,7 @@ public class Q21
 			break;
 		}
 	}
-	
+
 	public static void project(Scanner sc)
 	{
 		int initInput = 0;
