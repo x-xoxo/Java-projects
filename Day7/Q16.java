@@ -8,11 +8,13 @@ public class Q16
 
 	public static void main(String[] args) 
 	{
+		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
 		int lake[][] = new int[5][5];
 		int fishCount=3;
 		int fishRow[]=new int[3], fishCol[]=new int[3];
+		final int UP=1, DOWN=2, LEFT=3,RIGHT=4;
 		for(int i=0; i<fishCount; i++)
 		{
 			fishRow[i] = rand.nextInt(lake.length);
@@ -30,7 +32,6 @@ public class Q16
 			System.out.println((i+1)+"번 물고기 좌표: ["+fishRow[i]+","+fishCol[i]+"]");
 			lake[fishRow[i]][fishCol[i]] = 1;
 		}
-		
 		while(fishCount != 0)
 		{
 			System.out.println("캐스팅할 좌표를 입력해주세요(X , Y): ");
@@ -48,15 +49,70 @@ public class Q16
 					{
 						System.out.println("물고기를 잡았습니다!");
 						fishCount--;
+						lake[inputX][inputY] = 0;
+					}
+					if(fishCount == 0)
+					{
+						System.out.println("물고기를 다 잡았습니다!");
+						break;
+					}
+					System.out.println("현재 좌표 : [ "+ inputX + "," + inputY + " ]");
+					System.out.println("남은 물고기 수: " + fishCount);
+					System.out.println("1.Up 2.Down 3.Left 4.Right");
+					int moveDirection = sc.nextInt();
+					if(!(moveDirection>=UP && moveDirection<=RIGHT))
+					{
+						System.out.println("잘못된 입력입니다.");
 					}
 					else
 					{
-						System.out.println("1.Up 2.Down 3.Left 4.Right");
+						if(moveDirection==UP||moveDirection==DOWN)
+						{
+							if(moveDirection==UP)
+							{
+								if(inputY==0)
+								{
+									System.out.println("더 이상 이동할 곳이 없습니다.");
+									continue;
+								}
+								inputY--;
+							}
+							else
+							{
+								if(inputY==4)
+								{
+									System.out.println("더 이상 이동할 곳이 없습니다.");
+									continue;
+								}
+								inputY++;
+							}
+						}
+						else
+						{
+							if(moveDirection==LEFT)
+							{
+								if(inputX==0)
+								{
+									System.out.println("더 이상 이동할 곳이 없습니다.");
+									continue;
+								}
+								inputX--;
+							}
+							else
+							{
+								if(inputX==4)
+								{
+									System.out.println("더 이상 이동할 곳이 없습니다.");
+									continue;
+								}
+								inputX++;
+							}
+						}
 					}
 				}
 			}
 		}
-		
+		sc.close();
 		
 	}
 

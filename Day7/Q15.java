@@ -155,6 +155,79 @@ public class Q15
 			System.out.println();
 		}
 		System.out.println("----------------------------------- Q.15-5"); // 마방진
+		int arr4[][] = new int[5][5];
+		int len = arr4.length;
+		int row = 0,col = 2;
+		int addnum = 1;
+		while(addnum!=len*len+1)
+		{
+			arr4[row][col] = addnum;
+			
+			int newrow = row-1;
+			int newcol = col+1;
+			
+			if(newrow==-1)
+			{
+				newrow = 4;
+			}
+			if(newcol==5)
+			{
+				newcol = 0;
+			}
+			if(arr4[newrow][newcol]==0)
+			{
+				row = newrow;
+				col = newcol;
+			}
+			else
+			{
+				row = row+1;
+			}
+			addnum++;
+		}
+		for(int i=0; i<len; i++)
+		{
+			for(int j=0; j<len; j++)
+			{
+				System.out.printf("%d\t",arr4[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println("----------------------------------- Q.15-5"); // 마방진 7X7
+		int arr5[][] = new int[7][7];
+		int len2 = arr5.length;
+		int row2 = 0,col2 = 3;
+		int addnum2 = 1;
+		while(addnum2!=len2*len2+1)
+		{
+			arr5[row2][col2] = addnum2;
+			if(addnum2%7==0)
+			{
+				row2++;
+			}
+			else
+			{
+				row2--;
+				col2++;
+			}
+			addnum2++;
+			if(col2==7)
+			{
+				col2 -= len2;
+			}
+			if(row2==-1)
+			{
+				row2 += len2;
+			}
+		}
+		for(int i=0; i<len2; i++)
+		{
+			for(int j=0; j<len2; j++)
+			{
+				System.out.printf("%d\t",arr5[i][j]);
+			}
+			System.out.println();
+		}
 		
 	}
 
