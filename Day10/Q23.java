@@ -25,7 +25,7 @@ public class Q23
 	{
 		for(int k=0; k<a.length; k++)
 		{
-			System.out.print("a["+k+"] = "+ a[k]+"\n"); // 초기 배열 값 출력
+			System.out.print("a["+k+"] = "+ a[k]+"\n"); // 배열 값 출력
 		}
 	}
 
