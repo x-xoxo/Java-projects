@@ -17,7 +17,7 @@ class Bike {
 	String purpose = "";
 
 	public void ride() {
-		System.out.println(maker + "의" + purpose + "자전거를 탑니다.");
+		System.out.println(maker + "의 " + purpose + "자전거를 탑니다.");
 	}
 }
 

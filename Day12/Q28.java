@@ -10,49 +10,63 @@ public class Q28 {
 		Animal dog = new Animal();
 		Animal chicken = new Animal();
 		Animal pig = new Animal();
-		monkey.whoAmI(sc);
-		monkey.whatIHave(sc);
-		dog.whoAmI(sc);
-		dog.whatIHave(sc);
-		chicken.whoAmI(sc);
-		chicken.whatIHave(sc);
-		pig.whoAmI(sc);
-		pig.whatIHave(sc);
-		dog.print(monkey,dog,chicken,pig);
-		monkey.changefood(dog);
-		monkey.changefood(chicken);
-		monkey.changefood(pig);
+		String tmp = "";
+		monkey.SetName("원숭이");
+		monkey.SetFood("바나나");
+		dog.SetName("개");
+		dog.SetFood("뼈다귀");
+		chicken.SetName("닭");
+		chicken.SetFood("모이");
+		pig.SetName("돼지");
+		pig.SetFood("여물");
+		
+		monkey.Display();
+		dog.Display();
+		chicken.Display();
+		pig.Display();
+		
+		tmp = pig.GetFood();
+		pig.SetFood(chicken.GetFood());
+		chicken.SetFood(dog.GetFood());
+		dog.SetFood(monkey.GetFood());
+		monkey.SetFood(tmp);
+		
 		System.out.println("After change");
-		monkey.print(monkey, dog, chicken, pig);
+		
+		monkey.Display();
+		dog.Display();
+		chicken.Display();
+		pig.Display();
 	}
 
 }
 
 class Animal {
-	String name = "";
-	String food = "";
-	public void whoAmI(Scanner sc)
+	private String name = "";
+	private String food = "";
+	
+	void Display()
 	{
-		System.out.print("이름을 입력하시오: ");
-		name = sc.next();
+		System.out.println("이름 : "+GetName()+ " / 가지고있는 음식 : "+GetFood());
 	}
-	public void whatIHave(Scanner sc)
+	
+	void SetName(String str)
 	{
-		System.out.print("어떤 음식을 들고있는지 입력하세요: ");
-		food = sc.next();
+		this.name = str;
 	}
-	public void changefood(Animal names)
+	
+	String GetName()
 	{
-		String str = "";
-		str = names.food;
-		names.food = food;
-		food = str;
+		return this.name;
 	}
-	public void print(Animal name1,Animal name2,Animal name3,Animal name4)
+	
+	void SetFood(String str)
 	{
-		System.out.println("이름: "+name1.name+" / 들고있는 음식: "+name1.food);
-		System.out.println("이름: "+name2.name+" / 들고있는 음식: "+name2.food);
-		System.out.println("이름: "+name3.name+" / 들고있는 음식: "+name3.food);
-		System.out.println("이름: "+name4.name+" / 들고있는 음식: "+name4.food);
+		this.food = str;
+	}
+	
+	String GetFood()
+	{
+		return this.food;
 	}
 }
