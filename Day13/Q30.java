@@ -131,17 +131,19 @@ public class Q30
 								{
 									for(int i=0;i<pc.length/2;i++)
 									{
-										if(pc[i].getStatus()!=null)
+										if(pc[i]!=null)
 										{
-											con[j].pc[i] = new Computer();
 											con[j].pc[i] = pc[i];
 											pc[i] = null;
-											pc[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-200);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==pc.length/2-1 && pc[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -155,20 +157,19 @@ public class Q30
 								{
 									for(int i=pc.length/2;i<pc.length;i++)
 									{
-										if(pc[i].getStatus()!=null)
+										if(pc[i]!=null)
 										{
-											con[j].pc[i] = new Computer();
-											for(int k=0;k<pc.length;k++)
-											{
-												con[j].pc[k] = pc[k];
-											}
+											con[j].pc[i] = pc[i];
 											pc[i] = null;
-											pc[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-150);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==pc.length-1 && pc[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -192,20 +193,19 @@ public class Q30
 								{
 									for(int i=0;i<ac.length/2;i++)
 									{
-										if(ac[i].getStatus()!=null)
+										if(ac[i]!=null)
 										{
-											con[j].ac[i] = new Airconditioner();
-											for(int k=0;k<ac.length;k++)
-											{
-												con[j].ac[k] = ac[k];
-											}
+											con[j].ac[i] = ac[i];
 											ac[i] = null;
-											ac[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-100);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==ac.length/2-1 && ac[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -219,20 +219,19 @@ public class Q30
 								{
 									for(int i=ac.length/2;i<ac.length;i++)
 									{
-										if(ac[i].getStatus()!=null)
+										if(ac[i]!=null)
 										{
-											con[j].ac[i] = new Airconditioner();
-											for(int k=0;k<ac.length;k++)
-											{
-												con[j].ac[k] = ac[k];
-											}
+											con[j].ac[i] = ac[i];
 											ac[i] = null;
-											ac[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-250);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==ac.length-1 && ac[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -256,20 +255,19 @@ public class Q30
 								{
 									for(int i=0;i<fr.length/2;i++)
 									{
-										if(fr[i].getStatus()!=null)
+										if(fr[i]!=null)
 										{
-											con[j].fr[i] = new Freezer();
-											for(int k=0;k<fr.length;k++)
-											{
-												con[j].fr[k] = fr[k];
-											}
+											con[j].fr[i] = fr[i];
 											fr[i] = null;
-											fr[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-200);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==fr.length/2-1 && fr[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -283,20 +281,19 @@ public class Q30
 								{
 									for(int i=fr.length/2;i<fr.length;i++)
 									{
-										if(fr[i].getStatus()!=null)
+										if(fr[i]!=null)
 										{
-											con[j].fr[i] = new Freezer();
-											for(int k=0;k<fr.length;k++)
-											{
-												con[j].fr[k] = fr[k];
-											}
+											con[j].fr[i] = fr[i];
 											fr[i] = null;
-											fr[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-350);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==fr.length-1 && fr[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -320,20 +317,19 @@ public class Q30
 								{
 									for(int i=0;i<ar.length/2;i++)
 									{
-										if(ar[i].getStatus()!=null)
+										if(ar[i]!=null)
 										{
-											con[j].ar[i] = new Airrefresher();
-											for(int k=0;k<ar.length;k++)
-											{
-												con[j].ar[k] = ar[k];
-											}
+											con[j].ar[i] = ar[i];
 											ar[i] = null;
-											ar[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-80);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==ar.length/2-1 && ar[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -347,20 +343,19 @@ public class Q30
 								{
 									for(int i=ar.length/2;i<ar.length;i++)
 									{
-										if(ar[i].getStatus()!=null)
+										if(ar[i]!=null)
 										{
-											con[j].ar[i] = new Airrefresher();
-											for(int k=0;k<ar.length;k++)
-											{
-												con[j].ar[k] = ar[k];
-											}
+											con[j].ar[i] = ar[i];
 											ar[i] = null;
-											ar[i].setStatus(null);
 											con[j].setMoney(con[j].getMoney()-60);
 											System.out.println("구입완료. 남은 소지금 : "+con[j].getMoney());
 											break;
 										}
-										System.out.println("남은 수량이 없습니다.");
+										if(i==ar.length-1 && ar[i]==null)
+										{
+											System.out.println("남은 수량이 없습니다.");
+											break;
+										}
 									}
 								}
 							}
@@ -382,32 +377,44 @@ public class Q30
 		{
 			for(int j=0;j<con[i].pc.length;j++)
 			{
-				System.out.print(i+1+"번 소비자의 ");
-				con[i].pc[j].Use();
+				if(con[i].pc[j]!=null)
+				{
+					System.out.print(i+1+"번 소비자, ");
+					con[i].pc[j].Use();
+				}
 			}
 		}
 		for(int i=0;i<con.length;i++)
 		{
 			for(int j=0;j<con[i].ac.length;j++)
 			{
-				System.out.print(i+1+"번 소비자의 ");
-				con[i].ac[j].Use();
+				if(con[i].ac[j]!=null)
+				{
+					System.out.print(i+1+"번 소비자, ");
+					con[i].ac[j].Use();
+				}
 			}
 		}
 		for(int i=0;i<con.length;i++)
 		{
 			for(int j=0;j<con[i].fr.length;j++)
 			{
-				System.out.print(i+1+"번 소비자의 ");
-				con[i].fr[j].Use();
+				if(con[i].fr[j]!=null)
+				{
+					System.out.print(i+1+"번 소비자, ");
+					con[i].fr[j].Use();
+				}
 			}
 		}
 		for(int i=0;i<con.length;i++)
 		{
 			for(int j=0;j<con[i].ar.length;j++)
 			{
-				System.out.print(i+1+"번 소비자의 ");
-				con[i].ar[j].Use();
+				if(con[i].ar[j]!=null)
+				{
+					System.out.print(i+1+"번 소비자, ");
+					con[i].ar[j].Use();
+				}
 			}
 		}
 	}
@@ -440,13 +447,6 @@ class Computer
 {
 	private String maker = "";
 	private String modelName = "";
-	private String status = "OnSale";
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	private int price = 0;
 
 	void setMaker(String name)
@@ -483,13 +483,6 @@ class Airconditioner
 {
 	private String maker = "";
 	private String modelType = "";
-	private String status = "OnSale";
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	private int price = 0;
 
 	void setMaker(String name)
@@ -526,13 +519,6 @@ class Freezer
 {
 	private String maker = "";
 	private String modelType = "";
-	private String status = "OnSale";
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	private int size = 0;
 	private int price = 0;
 
@@ -577,13 +563,6 @@ class Freezer
 class Airrefresher
 {
 	private String maker = "";
-	private String status = "OnSale";
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	private int price = 0;
 	public String getMaker() {
 		return this.maker;
