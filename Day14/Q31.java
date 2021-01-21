@@ -18,8 +18,25 @@ class Lake {
 	Fish fs[][] = new Fish[5][5];
 }
 class Fisher {
+	int fisherX,fisherY;
+	public int getFisherX() {
+		return fisherX;
+	}
+
+	public void setFisherX(int fisherX) {
+		this.fisherX = fisherX;
+	}
+
+	public int getFisherY() {
+		return fisherY;
+	}
+
+	public void setFisherY(int fisherY) {
+		this.fisherY = fisherY;
+	}
+
 	int fishBag = 0;
-	
+
 	public int getFishBag() {
 		return fishBag;
 	}
@@ -28,16 +45,13 @@ class Fisher {
 		this.fishBag = fishBag;
 	}
 
-	void move()
-	{
-		
-	}
+
 }
 class GameControl {
 	Random rand = new Random();
 	Fisher gamer = new Fisher();
 	Lake hosu = new Lake();
-	void setFishData()
+	void randFishData()
 	{
 		for(int i=0; i<3; i++)
 		{
@@ -57,6 +71,85 @@ class GameControl {
 	{
 		return hosu.fs[x][y];
 	}
+	void run()
+	{
+		Scanner sc = new Scanner(System.in);
+		randFishData();
+		System.out.println("-----낚시 게임-----");
+		while(true)
+		{
+			System.out.print("캐스팅 좌표를 입력해주세요 > ");
+			gamer.setFisherX(sc.nextInt());
+			gamer.setFisherY(sc.nextInt());
+			if(gamer.getFisherX()<0||gamer.getFisherX()>4||gamer.getFisherY()<0||gamer.getFisherY()>4)
+			{
+				System.out.println("잘못된 입력입니다.");
+				continue;
+			}
+			if(getFishData(gamer.getFisherX(), gamer.getFisherY())!=null)
+			{
+				System.out.println("물고기를 잡았습니다.");
+				gamer.setFishBag(gamer.getFishBag()+1);
+			}
+			while(true)
+			{
+				final int UP=1,DOWN=2,LEFT=3,RIGHT=4;
+				int direction;
+				System.out.println("남은 물고기 : "+ (3-gamer.getFishBag())+"마리");
+				System.out.println("현재 좌표 : ["+gamer.getFisherX()+", "+gamer.getFisherY()+"]");
+				System.out.println("이동할 방향을 선택하세요");
+				System.out.print("1.UP 2.DOWN 3.LEFT 4.RIGHT > ");
+				direction = sc.nextInt();
+				if(!(direction==UP||direction==DOWN||direction==LEFT||direction==RIGHT))
+				{
+					System.out.println("잘못된 입력입니다.");
+					continue;
+				}
+				else if (direction == UP)
+				{
+					if (gamer.getFisherY()==4)
+						System.out.println("더 이상 이동할 공간이 없습니다.");
+					else
+						gamer.setFisherY(gamer.getFisherY()+1);
+				}
+				else if (direction == DOWN)
+				{
+					if (gamer.getFisherY()==0)
+						System.out.println("더 이상 이동할 공간이 없습니다.");
+					else
+						gamer.setFisherY(gamer.getFisherY()-1);
+				}
+				else if (direction == LEFT)
+				{
+					if (gamer.getFisherX()==0)
+						System.out.println("더 이상 이동할 공간이 없습니다.");
+					else
+						gamer.setFisherX(gamer.getFisherX()-1);
+				}
+				else
+				{
+					if (gamer.getFisherX()==4)
+						System.out.println("더 이상 이동할 공간이 없습니다.");
+					else
+						gamer.setFisherX(gamer.getFisherX()+1);
+				}
+				if(getFishData(gamer.getFisherX(), gamer.getFisherY())!=null)
+				{
+					System.out.println("물고기를 잡았습니다.");
+					gamer.setFishBag(gamer.getFishBag()+1);
+					hosu.fs[gamer.getFisherX()][gamer.getFisherY()] = null;
+				}
+				if(gamer.getFishBag()==3)
+				{
+					break;
+				}
+			}
+			System.out.println("물고기를 모두 잡았습니다.");
+			System.out.println("게임을 종료합니다.");
+			break;
+		}
+		sc.close();
+	}
 }
 
 public class Q31 
@@ -64,7 +157,8 @@ public class Q31
 
 	public static void main(String[] args) 
 	{
-
+		GameControl gc = new GameControl();
+		gc.run();
 	}
 
 }

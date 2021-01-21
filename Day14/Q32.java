@@ -75,7 +75,7 @@ public class Q32
 					int dist = rand.nextInt(10)+1;
 					p[i].setDistMoved(dist);
 					p[i].setTotalMoved(p[i].getTotalMoved()+p[i].getDistMoved());
-					System.out.println(p[i].getLaneNum()+"번 레인 "+"현재 거리 : "+p[i].getTotalMoved()+"M");
+					System.out.println(p[i].getLaneNum()+"번 레인 "+p[i].getCountryName()+"선수 "+"현재 거리 : "+p[i].getTotalMoved()+"M");
 				}
 			}
 			if(p[0].getTotalMoved()>=100||p[1].getTotalMoved()>=100||p[2].getTotalMoved()>=100||p[3].getTotalMoved()>=100)
