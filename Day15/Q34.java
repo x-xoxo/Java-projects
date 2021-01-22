@@ -176,6 +176,25 @@ class MasterControl {
 				fTire.tire[i].setDateOfManufacture("2019.02.13");
 			}
 		}
+		int tireCnt = 26, enginCnt = 16;
+		while(true)
+		{
+			for(int i=0; i<fTire.tire.length;i++)
+			{
+				if (fTire.tire[i] == null)
+				{
+					tireCnt--;
+				}
+			}
+			for(int i=0; i<fEngin.engin.length;i++)
+			{
+				if (fEngin.engin[i] == null)
+				{
+					enginCnt--;
+				}
+			}
+			
+		}
 	}
 }
 

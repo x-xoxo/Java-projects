@@ -69,18 +69,13 @@ class Control {
 				{
 					mk[4].obj = mk[i].obj;
 					mk[i].obj = null;
+					mk[4].prt();
 				}
 				else
 				{
 					mk[4-i].obj = mk[5-i].obj;
 					mk[5-i].obj = null;
-				}
-				for(int j=0;j<mk.length;j++)
-				{
-					if(mk[j].obj!=null)
-					{
-						mk[j].prt();
-					}
+					mk[4-i].prt();
 				}
 			}
 		}
@@ -92,18 +87,13 @@ class Control {
 				{
 					mk[0].obj = mk[i].obj;
 					mk[i].obj = null;
+					mk[0].prt();
 				}
 				else
 				{
 					mk[i+1].obj = mk[i].obj;
 					mk[i].obj = null;
-				}
-				for(int j=0;j<mk.length;j++)
-				{
-					if(mk[j].obj!=null)
-					{
-						mk[j].prt();
-					}
+					mk[i+1].prt();
 				}
 			}
 		}
