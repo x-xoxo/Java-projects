@@ -27,7 +27,7 @@ class Dog extends Dongmul {
 	{
 		Random r = new Random();
 		String colors[] = {"빨간색","주황색","노란색","초록색","파란색","남색","보라색"};
-		super.setColor(colors[r.nextInt(8)]);
+		super.setColor(colors[r.nextInt(7)]);
 		super.setName("강아지");
 	}
 	void introduce() 
@@ -39,7 +39,7 @@ class Cat extends Dongmul {
 	Cat() {
 		Random r = new Random();
 		String colors[] = {"빨간색","주황색","노란색","초록색","파란색","남색","보라색"};
-		super.setColor(colors[r.nextInt(8)]);
+		super.setColor(colors[r.nextInt(7)]);
 		super.setName("고양이");
 	}
 	void introduce() 
@@ -51,7 +51,7 @@ class Meerkat extends Dongmul {
 	Meerkat() {
 		Random r = new Random();
 		String colors[] = {"빨간색","주황색","노란색","초록색","파란색","남색","보라색"};
-		super.setColor(colors[r.nextInt(8)]);
+		super.setColor(colors[r.nextInt(7)]);
 		super.setName("미어캣");
 	}
 	void introduce() 
@@ -63,7 +63,7 @@ class Panda extends Dongmul {
 	Panda() {
 		Random r = new Random();
 		String colors[] = {"빨간색","주황색","노란색","초록색","파란색","남색","보라색"};
-		super.setColor(colors[r.nextInt(8)]);
+		super.setColor(colors[r.nextInt(7)]);
 		super.setName("판다");
 	}
 	void introduce() 
