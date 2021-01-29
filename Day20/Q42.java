@@ -1,8 +1,9 @@
-package Day19;
+package Day20;
 
+import java.io.*;
 import java.util.*;
 
-
+import Day19.PersonInfo;
 
 class PersonInfo {
 	private String name,number,adress,gender;
@@ -43,10 +44,11 @@ class PersonInfo {
 	}
 }
 
-public class Q41 {
+public class Q42 {
 
 	public static void main(String[] args) {
 		ArrayList<PersonInfo> numberBook = new ArrayList<PersonInfo>();
+		File telBook = new File("c:/Temp/telBook");
 		Scanner sc = new Scanner(System.in);
 		while(true)
 		{
@@ -79,6 +81,8 @@ public class Q41 {
 					System.out.print("> 성별 : ");
 					String pGender = sc.next();
 					numberBook.add(new PersonInfo(pName, pNumber, pAdress, pGender));
+					FileWriter fwriter = new FileWriter(telBook,true);
+					fwriter.write(numberBook.get(0), , );
 					System.out.println("전화번호부에 등록이 완료되었습니다.");
 				}
 			}
