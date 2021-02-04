@@ -1,23 +1,23 @@
-package Day1;
+package Day19;
 
 import java.util.Random;
 
-//ºñ¿©ÀÖÀ½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 interface Buster
 {
 
 }
-//Å»°ÍÅ¬·¡½º
+//Å»ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
 class Vehicle
 {
-	private int mileage;//ÁÖÇà°Å¸®
-	private int gauge;//°ÔÀÌÁö
+	private int mileage;//ï¿½ï¿½ï¿½ï¿½Å¸ï¿½
+	private int gauge;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	public int getMileage() {
 		return mileage;
 	}
 	public void setMileage(int mileage) {
-		this.mileage += mileage;//°Á ´©Àû½ÃÅ´
+		this.mileage += mileage;//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å´
 	}
 	public int getGauge() {
 		return gauge;
@@ -25,38 +25,38 @@ class Vehicle
 	public void setGauge(int gauge) {
 		this.gauge = gauge;
 	}
-	//ÀÌµ¿ÇÔ¼ö ¿À¹ö¶óÀÌµù
+	//ï¿½Ìµï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½
 	public void length() 
 	{
-		System.out.println("ÀÌµ¿ÇÑ´Ù!");
+		System.out.println("ï¿½Ìµï¿½ï¿½Ñ´ï¿½!");
 	}
 }
 
 class Car extends Vehicle implements Buster
 {
-	//ÀÌµ¿ÇÔ¼ö ¿À¹ö¶óÀÌµù(0~20M)
+	//ï¿½Ìµï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½(0~20M)
 	public void length() 
 	{
-		System.out.println("Â÷ ÀÌµ¿°Å¸®´Â"+getMileage()+"M ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ï¿½ï¿½"+getMileage()+"M ï¿½Ô´Ï´ï¿½.");
 	}
 
 }
 
 class Bycle extends Vehicle implements Buster
 {	
-	//ÀÌµ¿ÇÔ¼ö ¿À¹ö¶óÀÌµù(0~10)
+	//ï¿½Ìµï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½(0~10)
 	public void length()
 	{
-		System.out.println("ÀÚÀü°Å ÀÌµ¿°Å¸®´Â"+getMileage()+"M ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ï¿½ï¿½"+getMileage()+"M ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
 class Auto extends Vehicle implements Buster
 {	
-	//ÀÌµ¿ÇÔ¼ö ¿À¹ö¶óÀÌµù(0~15)
+	//ï¿½Ìµï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½(0~15)
 	public void length()
 	{
-		System.out.println("¿ÀÅä¹ÙÀÌ ÀÌµ¿°Å¸®´Â"+getMileage()+"M ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ï¿½ï¿½"+getMileage()+"M ï¿½Ô´Ï´ï¿½.");
 	}
 
 
@@ -66,47 +66,47 @@ class Mulbuster
 {
 	public void buster(Buster k, int flag) 
 	{
-		if(k instanceof Car)//ÀÚµ¿Â÷¶ó¸é
+		if(k instanceof Car)//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		{
-			Car c = (Car)k; // Àç¼±¾ðÇØ¾ß Å¬·¡½º ÇÔ¼ö ¾µ¼öÀÕÀ½...
-			if(flag%4==0)//4ÅÏ¸¶´Ù +2
+			Car c = (Car)k; // ï¿½ç¼±ï¿½ï¿½ï¿½Ø¾ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+			if(flag%4==0)//4ï¿½Ï¸ï¿½ï¿½ï¿½ +2
 			{
-				System.out.println("ÀÚµ¿Â÷ ºÎ½ºÅÍ! +2M");
+				System.out.println("ï¿½Úµï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½! +2M");
 				c.setMileage(2);
 			}
 		}
 
-		else if(k instanceof Bycle)//ÀÚÀü°Å¶ó¸é
+		else if(k instanceof Bycle)//ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½ï¿½
 		{
 			Bycle b = (Bycle)k;
-			if(flag%2==0)//2ÅÏ¸¶´Ù +5
+			if(flag%2==0)//2ï¿½Ï¸ï¿½ï¿½ï¿½ +5
 			{
-				System.out.println("ÀÚÀü°Å ºÎ½ºÅÍ! +5M");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½! +5M");
 				b.setMileage(5);
 			}
 		}
-		else if(k instanceof Auto)//¿ÀÅä¹ÙÀÌ¶ó¸é
+		else if(k instanceof Auto)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
 		{
 			Auto a = (Auto)k;
-			if(flag%3==0)//3ÅÏ¸¶´Ù +3
+			if(flag%3==0)//3ï¿½Ï¸ï¿½ï¿½ï¿½ +3
 			{
-				System.out.println("¿ÀÅä¹ÙÀÌ ºÎ½ºÅÍ! +3M");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½! +3M");
 				a.setMileage(3);
 			}
 		}
 		else
 		{
-			System.out.println("¿¡·¯");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		}
 	}
 }
 
 
 
-public class chu4 {
+public class VehicleBooster {
 	static void prints(Vehicle k)
 	{
-		k.length();//¿À¹ö¶óÀÌµù Ãâ·ÂÇÔ¼ö
+		k.length();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½
 	}
 
 	public static void main(String[] args) {
@@ -123,21 +123,21 @@ public class chu4 {
 		while(true) 
 		{
 			int index = 0;
-			index = r.nextInt(3)+1;//1~3·£´ý¼ö
+			index = r.nextInt(3)+1;//1~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 			switch(index)
 			{
-			case 1://ÀÚµ¿Â÷ ¸ØÃã
-				a.setMileage(r.nextInt(16));//¿ÀÅä¹ÙÀÌ´Â 0~15
-				b.setMileage(r.nextInt(11));//ÀÚÀü°Å´Â 0~10
+			case 1://ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+				a.setMileage(r.nextInt(16));//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ 0~15
+				b.setMileage(r.nextInt(11));//ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½ 0~10
 				break;
-			case 2://ÀÚÀü°Å ¸ØÃã
-				a.setMileage(r.nextInt(16));//¿ÀÅä¹ÙÀÌ´Â 0~15
-				c.setMileage(r.nextInt(21));//ÀÚµ¿Â÷´Â 0~20
+			case 2://ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+				a.setMileage(r.nextInt(16));//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ 0~15
+				c.setMileage(r.nextInt(21));//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ 0~20
 				break;
-			case 3://¿ÀÅä¹ÙÀÌ ¸ØÃã
-				b.setMileage(r.nextInt(11));//ÀÚÀü°Å´Â 0~10
-				c.setMileage(r.nextInt(21));//ÀÚµ¿Â÷´Â 0~20
+			case 3://ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+				b.setMileage(r.nextInt(11));//ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½ 0~10
+				c.setMileage(r.nextInt(21));//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ 0~20
 				break;
 			}
 
@@ -146,35 +146,35 @@ public class chu4 {
 			mb.buster((Bycle)b, flag);
 			mb.buster((Car)c, flag);
 			
-			prints(a);//¿À¹ö¶óÀÌµùÀ¸·Î ÀÌµ¿°Å¸® °è¼Ó ºÒ·¯¿È(¿ÀÅä¹ÙÀÌ)
-			prints(b);//¿À¹ö¶óÀÌµùÀ¸·Î ÀÌµ¿°Å¸® °è¼Ó ºÒ·¯¿È(ÀÚÀü°Å)
-			prints(c);//¿À¹ö¶óÀÌµùÀ¸·Î ÀÌµ¿°Å¸® °è¼Ó ºÒ·¯¿È(ÀÚµ¿Â÷)
+			prints(a);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+			prints(b);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+			prints(c);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½(ï¿½Úµï¿½ï¿½ï¿½)
 
-			//ºÎ½ºÅÍ ÇÔ¼ö(2ÅÏ¸¶´Ù ÀÚÀü°Å), (3ÅÏ¸¶´Ù ¿ÀÅä¹ÙÀÌ), (4ÅÏ¸¶´Ù ÀÚµ¿Â÷)
-			//ÀÚµ¿Â÷, ¿ÀÅä¹ÙÀÌ, ÀÚÀü°Å´Â ÀÌ¹Ì ÀÎÅÍÆäÀÌ½º »ó¼Ó¹Þ¾ÆÁ® ÀÖÀ½. ÀÎÅÍÆäÀÌ½º¸í : Buster
+			//ï¿½Î½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½(2ï¿½Ï¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½), (3ï¿½Ï¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½), (4ï¿½Ï¸ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½)
+			//ï¿½Úµï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½ï¿½Ó¹Þ¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ : Buster
 			
 
 
 			if(a.getMileage()>=500)
 			{
-				System.out.println("¿ÀÅä¹ÙÀÌ ¿ì½Â");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 				break;
 			}
 
 			else if(b.getMileage()>=500)
 			{
-				System.out.println("ÀÚÀü°Å ¿ì½Â");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 				break;
 			}
 
 			else if(c.getMileage()>=500)
 			{
-				System.out.println("ÀÚµ¿Â÷ ¿ì½Â");
+				System.out.println("ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 				break;
 			}
 
 			flag++;
-			System.out.println("ÇöÀç "+flag+"ÅÏ ÀÔ´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ "+flag+"ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.");
 		}
 
 	}

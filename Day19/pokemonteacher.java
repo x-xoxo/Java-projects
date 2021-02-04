@@ -1,4 +1,4 @@
-package Thirteen;
+package Day19;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -14,12 +14,12 @@ class Pikachu extends Unit4
    Pikachu() 
    {
       super.size = 30;
-      super.type = "Àü±â";
+      super.type = "ï¿½ï¿½ï¿½ï¿½";
    }
 
    void tell()
    {
-      System.out.println("ÇÇÄ«ÇÇÄ«~");
+      System.out.println("ï¿½ï¿½Ä«ï¿½ï¿½Ä«~");
    }
 }
 
@@ -27,13 +27,12 @@ class Squirtle extends Unit4
 {
    public Squirtle() 
    {
-      // TODO Auto-generated constructor stub
       super.size = 50;
-      super.type ="¹°";
+      super.type ="ï¿½ï¿½";
    }
    void tell()
    {
-      System.out.println("²¿ºÏ ²¿ºÏ~");
+      System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½~");
    }
 }
 
@@ -41,37 +40,34 @@ class Bulbasaur extends Unit4
 {
    public Bulbasaur() 
    {
-      // TODO Auto-generated constructor stub
       super.size = 40;
-      super.type ="½Ä¹°";
+      super.type ="ï¿½Ä¹ï¿½";
    }
    void tell()
    {
-      System.out.println("ÀÌ»ó ÀÌ»óÇØ¾¾~");
+      System.out.println("ï¿½Ì»ï¿½ ï¿½Ì»ï¿½ï¿½Ø¾ï¿½~");
    }
 }
 
 class Charmander extends Unit4
 {
    public Charmander() {
-      // TODO Auto-generated constructor stub
       super.size = 45;
-      super.type = "ºÒ";
+      super.type = "ï¿½ï¿½";
    }
    void tell()
    {
-      System.out.println("ÆÄÀÌ ÆÄÀÌ¸®~");
+      System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½~");
    }
 }
 
 class Jiwoo
 {
-   PocketBall[] pb = new PocketBall[3]; // Æ÷ÄÏº¼À» ¼¼¹ø ´øÁü
+   PocketBall[] pb = new PocketBall[3]; // ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    int count = 0;
 
    public Jiwoo() 
    {
-      // TODO Auto-generated constructor stub
       for(int i = 0;i<3;i++)
       {
          pb[i] = new PocketBall();
@@ -85,16 +81,16 @@ class Jiwoo
       
       while(true)
       {
-         System.out.print("¿øÇÏ´Â ¸ó½ºÅÍ¸¦ ÀÔ·ÂÇÏ¼¼¿ä(ÇÇÄ«Ãò, ²¿ºÎ±â, ÀÌ»óÇØ¾¾, ÆÄÀÌ¸®) : ");
+         System.out.print("ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½(ï¿½ï¿½Ä«ï¿½ï¿½, ï¿½ï¿½ï¿½Î±ï¿½, ï¿½Ì»ï¿½ï¿½Ø¾ï¿½, ï¿½ï¿½ï¿½Ì¸ï¿½) : ");
          str=s.next();
-         if(str.equals("ÇÇÄ«Ãò")||str.equals("²¿ºÎ±â")||str.equals("ÀÌ»óÇØ¾¾")||str.equals("ÆÄÀÌ¸®")) 
+         if(str.equals("ï¿½ï¿½Ä«ï¿½ï¿½")||str.equals("ï¿½ï¿½ï¿½Î±ï¿½")||str.equals("ï¿½Ì»ï¿½ï¿½Ø¾ï¿½")||str.equals("ï¿½ï¿½ï¿½Ì¸ï¿½")) 
          {
-            System.out.println("ok ¿Ï·á");
+            System.out.println("ok ï¿½Ï·ï¿½");
             break;
          }
          else
          {
-            System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+            System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½.");
          }
       }
 
@@ -130,22 +126,22 @@ class PocketBall
    {
       if(p != null)
       {
-         System.out.println("ÇÇÄ«Ãò´Â"+p.type+"Æ÷ÄÏ¸óÀÌ°í Å©±â´Â "+p.size+"ÀÔ´Ï´Ù.");
+         System.out.println("ï¿½ï¿½Ä«ï¿½ï¿½ï¿½"+p.type+"ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ì°ï¿½ Å©ï¿½ï¿½ï¿½ "+p.size+"ï¿½Ô´Ï´ï¿½.");
          p.tell();
       }
       if(sq != null)
       {
-         System.out.println("²¿ºÎ±â´Â"+sq.type+"Æ÷ÄÏ¸óÀÌ°í Å©±â´Â "+sq.size+"ÀÔ´Ï´Ù.");
+         System.out.println("ï¿½ï¿½ï¿½Î±ï¿½ï¿½"+sq.type+"ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ì°ï¿½ Å©ï¿½ï¿½ï¿½ "+sq.size+"ï¿½Ô´Ï´ï¿½.");
          sq.tell();
       }
       if(bu != null)
       {
-         System.out.println("ÀÌ»óÇØ¾¾´Â"+bu.type+"Æ÷ÄÏ¸óÀÌ°í Å©±â´Â "+bu.size+"ÀÔ´Ï´Ù.");
+         System.out.println("ï¿½Ì»ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½"+bu.type+"ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ì°ï¿½ Å©ï¿½ï¿½ï¿½ "+bu.size+"ï¿½Ô´Ï´ï¿½.");
          bu.tell();
       }
       if(ch != null)
       {
-         System.out.println("ÆÄÀÌ¸®´Â"+ch.type+"Æ÷ÄÏ¸óÀÌ°í Å©±â´Â "+ch.size+"ÀÔ´Ï´Ù.");
+         System.out.println("ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½"+ch.type+"ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ì°ï¿½ Å©ï¿½ï¿½ï¿½ "+ch.size+"ï¿½Ô´Ï´ï¿½.");
          ch.tell();
       }
    }
@@ -155,7 +151,6 @@ class PocketBall
 public class pokemonteacher {
 
    public static void main(String[] args) {
-      // TODO Auto-generated method stub
 
       Pikachu p = new Pikachu();
       Squirtle sq = new Squirtle();
@@ -166,13 +161,13 @@ public class pokemonteacher {
 
       PocketBall pb;
 
-      System.out.println("°ÔÀÓ½ÃÀÛ");
+      System.out.println("ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½");
 
       for(int i = 0;i<3;i++)
       {
          String mon = j.MonsterCheck();
 
-         if(mon.equals("ÇÇÄ«Ãò"))
+         if(mon.equals("ï¿½ï¿½Ä«ï¿½ï¿½"))
          {
             pb = j.throwPocketBall();
 
@@ -187,12 +182,12 @@ public class pokemonteacher {
             }
             else
             {
-               System.out.println("Æ÷ÄÏº¼ÀÌ ¾ø½À´Ï´Ù.");
+               System.out.println("ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
 
          }
 
-         if(mon.equals("²¿ºÎ±â"))
+         if(mon.equals("ï¿½ï¿½ï¿½Î±ï¿½"))
          {
             pb = j.throwPocketBall();
 
@@ -207,11 +202,11 @@ public class pokemonteacher {
             }
             else
             {
-               System.out.println("Æ÷ÄÏº¼ÀÌ ¾ø½À´Ï´Ù.");
+               System.out.println("ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
          }
 
-         if(mon.equals("ÀÌ»óÇØ¾¾"))
+         if(mon.equals("ï¿½Ì»ï¿½ï¿½Ø¾ï¿½"))
          {
             pb = j.throwPocketBall();
 
@@ -226,11 +221,11 @@ public class pokemonteacher {
             }
             else
             {
-               System.out.println("Æ÷ÄÏº¼ÀÌ ¾ø½À´Ï´Ù.");
+               System.out.println("ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
          }
 
-         if(mon.equals("ÆÄÀÌ¸®"))
+         if(mon.equals("ï¿½ï¿½ï¿½Ì¸ï¿½"))
          {
             pb = j.throwPocketBall();
 
@@ -245,7 +240,7 @@ public class pokemonteacher {
             }
             else
             {
-               System.out.println("Æ÷ÄÏº¼ÀÌ ¾ø½À´Ï´Ù.");
+               System.out.println("ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
          }
       }
@@ -254,7 +249,7 @@ public class pokemonteacher {
       {
          if(j.pb[i].p == null && j.pb[i].sq == null && j.pb[i].bu == null && j.pb[i].ch == null)
          {
-            System.out.println("Æ÷ÄÏ¸óº¼ÀÌ ºñ¾î ÀÖ½À´Ï´Ù.");
+            System.out.println("ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
          }
          else
          {

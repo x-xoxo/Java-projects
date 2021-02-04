@@ -1,4 +1,4 @@
-package Thirteen;
+package Day19;
 
 import java.util.Scanner;
 
@@ -16,21 +16,21 @@ class Unit
 
 class Juggling extends Unit
 {
-	Juggling(int num) // »ý¼ºÀÚ
+	Juggling(int num) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	{
 		super.num = num;
 		super.price = 50;
 		super.hp = 35;
 		super.attack = 5;
 		super.defense = 0;
-		super.target = "Áö»ó";
+		super.target = "ï¿½ï¿½ï¿½ï¿½";
 		super.speed = 2.612;
-		super.characteristic = "Áö»ó, ¼ÒÇü, »ýÃ¼";
+		super.characteristic = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ã¼";
 	}
 	
 	void print()
 	{
-		System.out.println("Àú±Û¸µÀÇ »ý»êºñ¿ëÀº ¹Ì³×¶ö " + super.price + ", Ã¼·Â " + super.hp + ", °ø°Ý·Â " + super.attack + " ¹æ¾î·Â " + super.defense + ", °ø°Ý´ë»ó " + super.target + ", ÀÌµ¿¼Óµµ " + super.speed + ", À¯´Ö Æ¯¼º" + super.characteristic + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½Û¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì³×¶ï¿½ " + super.price + ", Ã¼ï¿½ï¿½ " + super.hp + ", ï¿½ï¿½ï¿½Ý·ï¿½ " + super.attack + " ï¿½ï¿½ï¿½ï¿½ " + super.defense + ", ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ " + super.target + ", ï¿½Ìµï¿½ï¿½Óµï¿½ " + super.speed + ", ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½" + super.characteristic + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
@@ -43,14 +43,14 @@ class Hydra extends Unit
 		super.hp = 80;
 		super.attack = 10;
 		super.defense = 0;
-		super.target = "Áö»ó, °øÁß";
+		super.target = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½";
 		super.speed = 1.741;
-		super.characteristic = "Áö»ó, ÁßÇü, »ýÃ¼";
+		super.characteristic = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ã¼";
 	}
 	
 	void print()
 	{
-		System.out.println("È÷µå¶óÀÇ »ý»êºñ¿ëÀº ¹Ì³×¶ö " + super.price + ", Ã¼·Â " + super.hp + ", °ø°Ý·Â " + super.attack + " ¹æ¾î·Â " + super.defense + ", °ø°Ý´ë»ó " + super.target + ", ÀÌµ¿¼Óµµ " + super.speed + ", À¯´Ö Æ¯¼º" + super.characteristic + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì³×¶ï¿½ " + super.price + ", Ã¼ï¿½ï¿½ " + super.hp + ", ï¿½ï¿½ï¿½Ý·ï¿½ " + super.attack + " ï¿½ï¿½ï¿½ï¿½ " + super.defense + ", ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ " + super.target + ", ï¿½Ìµï¿½ï¿½Óµï¿½ " + super.speed + ", ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½" + super.characteristic + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
@@ -63,14 +63,14 @@ class Lurker extends Unit
 		super.hp = 125;
 		super.attack = 20;
 		super.defense = 1;
-		super.target = "Áö»ó";
+		super.target = "ï¿½ï¿½ï¿½ï¿½";
 		super.speed = 2.813;
-		super.characteristic = "Áö»ó, ÁßÇü, »ýÃ¼";
+		super.characteristic = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ã¼";
 	}
 	
 	void print()
 	{
-		System.out.println("·²Ä¿ÀÇ »ý»êºñ¿ëÀº ¹Ì³×¶ö " + super.price + ", Ã¼·Â " + super.hp + ", °ø°Ý·Â " + super.attack + " ¹æ¾î·Â " + super.defense + ", °ø°Ý´ë»ó " + super.target + ", ÀÌµ¿¼Óµµ " + super.speed + ", À¯´Ö Æ¯¼º" + super.characteristic + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì³×¶ï¿½ " + super.price + ", Ã¼ï¿½ï¿½ " + super.hp + ", ï¿½ï¿½ï¿½Ý·ï¿½ " + super.attack + " ï¿½ï¿½ï¿½ï¿½ " + super.defense + ", ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ " + super.target + ", ï¿½Ìµï¿½ï¿½Óµï¿½ " + super.speed + ", ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½" + super.characteristic + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
@@ -83,14 +83,14 @@ class Marine extends Unit
 		super.hp = 50;
 		super.attack = 6;
 		super.defense = 0;
-		super.target = "Áö»ó, °øÁß";
+		super.target = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½";
 		super.speed = 1.875;
-		super.characteristic = "Áö»ó, ¼ÒÇü, »ýÃ¼";
+		super.characteristic = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ã¼";
 	}
 	
 	void print()
 	{
-		System.out.println("¸¶¸°ÀÇ »ý»êºñ¿ëÀº ¹Ì³×¶ö " + super.price + ", Ã¼·Â " + super.hp + ", °ø°Ý·Â " + super.attack + " ¹æ¾î·Â " + super.defense + ", °ø°Ý´ë»ó " + super.target + ", ÀÌµ¿¼Óµµ " + super.speed + ", À¯´Ö Æ¯¼º" + super.characteristic + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì³×¶ï¿½ " + super.price + ", Ã¼ï¿½ï¿½ " + super.hp + ", ï¿½ï¿½ï¿½Ý·ï¿½ " + super.attack + " ï¿½ï¿½ï¿½ï¿½ " + super.defense + ", ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ " + super.target + ", ï¿½Ìµï¿½ï¿½Óµï¿½ " + super.speed + ", ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½" + super.characteristic + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
@@ -103,14 +103,14 @@ class Firebat extends Unit
 		super.hp = 50;
 		super.attack = 16;
 		super.defense = 1;
-		super.target = "Áö»ó";
+		super.target = "ï¿½ï¿½ï¿½ï¿½";
 		super.speed = 1.875;
-		super.characteristic = "Áö»ó, ¼ÒÇü, »ýÃ¼";
+		super.characteristic = "ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ã¼";
 	}
 	
 	void print()
 	{
-		System.out.println("ÆÄÀÌ¾îºªÀÇ »ý»êºñ¿ëÀº ¹Ì³×¶ö " + super.price + ", Ã¼·Â " + super.hp + ", °ø°Ý·Â " + super.attack + " ¹æ¾î·Â " + super.defense + ", °ø°Ý´ë»ó " + super.target + ", ÀÌµ¿¼Óµµ " + super.speed + ", À¯´Ö Æ¯¼º" + super.characteristic + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½Ì¾îºªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì³×¶ï¿½ " + super.price + ", Ã¼ï¿½ï¿½ " + super.hp + ", ï¿½ï¿½ï¿½Ý·ï¿½ " + super.attack + " ï¿½ï¿½ï¿½ï¿½ " + super.defense + ", ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ " + super.target + ", ï¿½Ìµï¿½ï¿½Óµï¿½ " + super.speed + ", ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½" + super.characteristic + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
@@ -135,7 +135,7 @@ public class starcraft {
 		int count = 1;
 		int select;
 		
-		System.out.println("À¯Àú µ·À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½: ");
 		int money = sc.nextInt();
 		
 		while(true)
@@ -144,7 +144,7 @@ public class starcraft {
 			{
 				while(true)
 				{
-					System.out.println("±¸ÀÔ 1. Àú±Û¸µ 2.È÷µå¶ó 3.·²Ä¿ 4.¸¶¸° 5.ÆÄÀÌ¾îºª: ");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ 1. ï¿½ï¿½ï¿½Û¸ï¿½ 2.ï¿½ï¿½ï¿½ï¿½ï¿½ 3.ï¿½ï¿½Ä¿ 4.ï¿½ï¿½ï¿½ï¿½ 5.ï¿½ï¿½ï¿½Ì¾îºª: ");
 					select = sc.nextInt();
 				
 					if(select==1)
@@ -154,7 +154,7 @@ public class starcraft {
 						
 						if(money <0)
 						{
-							System.out.println("±¸ÀÔÀÌ ºÒ°¡ÇÕ´Ï´Ù.");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½Õ´Ï´ï¿½.");
 							money = money + j.price;
 							j=null;
 							count--;
@@ -179,7 +179,7 @@ public class starcraft {
 						
 						if(money <0)
 						{
-							System.out.println("±¸ÀÔÀÌ ºÒ°¡ÇÕ´Ï´Ù.");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½Õ´Ï´ï¿½.");
 							money = money + h.price;
 							h=null;
 							count--;
@@ -204,7 +204,7 @@ public class starcraft {
 						
 						if(money <0)
 						{
-							System.out.println("±¸ÀÔÀÌ ºÒ°¡ÇÕ´Ï´Ù.");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½Õ´Ï´ï¿½.");
 							money = money + l.price;
 							l=null;
 							count--;
@@ -229,7 +229,7 @@ public class starcraft {
 						
 						if(money <0)
 						{
-							System.out.println("±¸ÀÔÀÌ ºÒ°¡ÇÕ´Ï´Ù.");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½Õ´Ï´ï¿½.");
 							money = money + m.price;
 							m=null;
 							count--;
@@ -254,7 +254,7 @@ public class starcraft {
 						
 						if(money <0)
 						{
-							System.out.println("±¸ÀÔÀÌ ºÒ°¡ÇÕ´Ï´Ù.");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½Õ´Ï´ï¿½.");
 							money = money + f.price;
 							f=null;
 							count--;
@@ -273,7 +273,7 @@ public class starcraft {
 					}
 			else
 			{
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½.");
 			}
 		}
 	}
@@ -286,7 +286,7 @@ public class starcraft {
 				{
 					if(u.j[j].num == i)
 					{
-						System.out.println(i + "¹øÂ° : ");
+						System.out.println(i + "ï¿½ï¿½Â° : ");
 						u.j[j].print();
 						break;
 					}
@@ -298,7 +298,7 @@ public class starcraft {
 				{
 					if(u.h[k].num == i)
 					{
-						System.out.print(i+"¹øÂ° : ");
+						System.out.print(i+"ï¿½ï¿½Â° : ");
 						u.h[k].print();
 						break;
 					}
@@ -310,7 +310,7 @@ public class starcraft {
 				{
 					if(u.l[x].num == i)
 					{
-						System.out.print(i+"¹øÂ° : ");
+						System.out.print(i+"ï¿½ï¿½Â° : ");
 						u.l[x].print();
 						break;
 					}
@@ -322,7 +322,7 @@ public class starcraft {
 				{
 					if(u.m[y].num == i)
 					{
-						System.out.print(i+"¹øÂ° : ");
+						System.out.print(i+"ï¿½ï¿½Â° : ");
 						u.m[y].print();
 						break;
 					}
@@ -334,7 +334,7 @@ public class starcraft {
 				{
 					if(u.f[z].num == i)
 					{
-						System.out.print(i+"¹øÂ° : ");
+						System.out.print(i+"ï¿½ï¿½Â° : ");
 						u.f[z].print();
 						break;
 					}
