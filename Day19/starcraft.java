@@ -2,7 +2,7 @@ package Day19;
 
 import java.util.Scanner;
 
-class Unit
+class Units
 {
 	int num;
 	int price;
@@ -14,7 +14,7 @@ class Unit
 	String characteristic;
 }
 
-class Juggling extends Unit
+class Juggling extends Units
 {
 	Juggling(int num) // ������
 	{
@@ -34,7 +34,7 @@ class Juggling extends Unit
 	}
 }
 
-class Hydra extends Unit
+class Hydra extends Units
 {
 	Hydra(int num)
 	{
@@ -54,7 +54,7 @@ class Hydra extends Unit
 	}
 }
 
-class Lurker extends Unit
+class Lurker extends Units
 {
 	Lurker(int num)
 	{
@@ -74,9 +74,9 @@ class Lurker extends Unit
 	}
 }
 
-class Marine extends Unit
+class Marines extends Units
 {
-	Marine(int num)
+	Marines(int num)
 	{
 		super.num = num;
 		super.price = 50;
@@ -94,7 +94,7 @@ class Marine extends Unit
 	}
 }
 
-class Firebat extends Unit
+class Firebat extends Units
 {
 	Firebat(int num)
 	{
@@ -119,7 +119,7 @@ class User
 	Juggling[] j = new Juggling[10];
 	Hydra[] h = new Hydra[10];
 	Lurker[] l = new Lurker[10];
-	Marine[] m = new Marine[10];
+	Marines[] m = new Marines[10];
 	Firebat[] f = new Firebat[10];
 }
 
@@ -224,7 +224,7 @@ public class starcraft {
 					
 					else if(select==4)
 					{
-						Marine m = new Marine(count ++);
+						Marines m = new Marines(count ++);
 						money = money - m.price;
 						
 						if(money <0)
